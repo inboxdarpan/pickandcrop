@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Edit Photo"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+
+    <ImageView
+        android:id="@+id/back_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:padding="20dp"
+        android:src="@drawable/back"/>
+
+    <com.edmodo.cropper.CropImageView
+        android:id="@+id/cropImageView"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonPanel"
+        android:layout_below="@+id/headerView"
+        custom:imageResource="@drawable/account"/>
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/done">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutRotateLeft"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_left"
+                android:layout_alignTop="@+id/text_left"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/text_left"
+                android:src="@drawable/rotate_left"/>
+
+            <TextView
+                android:id="@+id/text_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="Rotate left"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutRotateRight"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/relativeLayoutRotateLeft"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/text_right"
+                android:layout_alignTop="@+id/text_right"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/text_right"
+                android:src="@drawable/rotate_right"/>
+
+            <TextView
+                android:id="@+id/text_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="Rotate right"
+                android:textColor="@color/purple"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Done"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+
+
+</RelativeLayout>
