@@ -14,4 +14,19 @@
         android:layout_height="match_parent"
         android:src="@drawable/ic_launcher" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detect faces"
+        android:id="@+id/detect_button"
+        android:layout_alignBottom="@+id/newimage"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/radius_button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="55dp" />
+
 </RelativeLayout>

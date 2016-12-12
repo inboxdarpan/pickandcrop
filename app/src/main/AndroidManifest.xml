@@ -21,16 +21,25 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".PickImageActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name=".EditImageActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name=".ShowImage"
-            android:label="@string/title_activity_show_image"/>
+            android:label="@string/title_activity_show_image" />
+        <activity android:name=".TutorialOnFaceDetect1">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".FaceDetectionActivity"></activity>
     </application>
 
 </manifest>
